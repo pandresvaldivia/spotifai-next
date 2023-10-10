@@ -19,7 +19,14 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@icons/*": ["./src/shared/components/icons/*"],
+      "@atoms": ["./src/shared/components/atoms/index"],
+      "@molecules": ["./src/shared/components/molecules/index"],
+      "@organisms": ["./src/shared/components/organisms/index"],
+      "@templates": ["./src/shared/components/templates/index"],
+      "@interfaces/*": ["./src/shared/interfaces/*"]
     }
   },
   "include": [

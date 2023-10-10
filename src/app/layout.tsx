@@ -1,12 +1,26 @@
+import classNames from 'classnames'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Navbar } from '@/shared/components/organisms'
+
+import '@styles/global.scss'
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-montserrat',
+})
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={classNames(montserrat.variable)}>
+      <body>
+        <div className="p-2">
+          <Navbar />
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
