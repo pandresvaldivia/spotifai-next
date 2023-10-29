@@ -1,7 +1,8 @@
-import { MainMenuItem } from '@atoms'
 import { HomeIcon as HomeIconOutline, SearchIcon as SearchIconOutline } from '@icons/outline'
 import { HomeIcon as HomeIconSolid, SearchIcon as SearchIconSolid } from '@icons/solid'
-import { PanelTemplate } from '@templates'
+
+import { MainMenuItem } from '@/app/(dashboard)/components/atoms'
+import { PanelTemplate } from '@/app/(dashboard)/components/templates'
 
 const MainMenu = () => {
   return (

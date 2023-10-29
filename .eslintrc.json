@@ -16,6 +16,7 @@
     "simple-import-sort/exports": "error",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
     // TS rules
     "prefer-template": "error",
     "no-useless-concat": "error",

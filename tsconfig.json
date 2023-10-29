@@ -20,13 +20,14 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@styles/*": ["./src/styles/*"],
+      "@styles/*": ["./src/shared/styles/*"],
       "@icons/*": ["./src/shared/components/icons/*"],
-      "@atoms": ["./src/shared/components/atoms/index"],
-      "@molecules": ["./src/shared/components/molecules/index"],
-      "@organisms": ["./src/shared/components/organisms/index"],
-      "@templates": ["./src/shared/components/templates/index"],
-      "@interfaces/*": ["./src/shared/interfaces/*"]
+      "@atoms": ["./src/app/components/atoms/index"],
+      "@molecules": ["./src/app/components/molecules/index"],
+      "@organisms": ["./src/app/components/organisms/index"],
+      "@templates": ["./src/app/components/templates/index"],
+      "@interfaces/*": ["./src/shared/interfaces/*"],
+      "@constants/*": ["./src/shared/constants/*"]
     }
   },
   "include": [

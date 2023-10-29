@@ -1,0 +1,13 @@
+.main {
+  max-width: 45.875rem;
+}
+
+.wrapper {
+  max-width: 20.25rem;
+}
+
+@screen md {
+  .title {
+    font-size: 2.5rem;
+  }
+}

@@ -2,8 +2,6 @@ import classNames from 'classnames'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
-import { Navbar } from '@/shared/components/organisms'
-
 import '@styles/global.scss'
 
 const montserrat = Montserrat({
@@ -15,12 +13,7 @@ const montserrat = Montserrat({
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={classNames(montserrat.variable)}>
-      <body>
-        <div className="p-2">
-          <Navbar />
-          {children}
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
