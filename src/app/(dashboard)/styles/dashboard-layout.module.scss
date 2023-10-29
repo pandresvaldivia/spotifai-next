@@ -16,5 +16,7 @@
 }
 
 .content {
+  grid-template-rows: 1fr auto;
+
   grid-area: content;
 }

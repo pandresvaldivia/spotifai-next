@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={classNames(montserrat.variable)}>
-      <body>{children}</body>
+      <body className="overflow-hidden">{children}</body>
     </html>
   )
 }
