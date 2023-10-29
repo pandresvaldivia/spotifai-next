@@ -1,4 +1,10 @@
-import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_JWT_SECRET } from '@constants/spotify'
+import {
+  SPOTIFY_CLIENT_ID,
+  SPOTIFY_CLIENT_SECRET,
+  SPOTIFY_JWT_SECRET,
+  SPOTIFY_TOKEN_URL,
+} from '@constants/spotify'
+import { getAuthorizationUrl } from '@helpers/auth'
 import NextAuth, { NextAuthOptions, TokenSet } from 'next-auth'
 import SpotifyProvider from 'next-auth/providers/spotify'
 
@@ -6,7 +12,7 @@ import SpotifyProvider from 'next-auth/providers/spotify'
 const refreshToken = async (token: any) => {
   try {
     // We need the `token_endpoint`.
-    const response = await fetch('https://accounts.spotify.com/api/token', {
+    const response = await fetch(SPOTIFY_TOKEN_URL, {
       headers: {
         Authorization: `Basic ${Buffer.from(
           `${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
@@ -14,6 +20,10 @@ const refreshToken = async (token: any) => {
         'content-type': 'application/x-www-form-urlencoded',
       },
       method: 'POST',
+      body: new URLSearchParams({
+        grant_type: 'refresh_token',
+        refresh_token: token.refresh_token,
+      }),
     })
 
     const tokens: TokenSet = await response.json()
@@ -40,6 +50,7 @@ export const authOptions = {
     SpotifyProvider({
       clientId: SPOTIFY_CLIENT_ID,
       clientSecret: SPOTIFY_CLIENT_SECRET,
+      authorization: getAuthorizationUrl(),
     }),
   ],
   pages: {
@@ -52,8 +63,11 @@ export const authOptions = {
         // Save the access token and refresh token in the JWT on the initial login
         return {
           access_token: account.access_token,
-          expires_at: Math.floor(Date.now() / 1000 + account.expires_in),
+          expires_at: Math.floor(Date.now() / 1000 + account.expires_at),
           refresh_token: account.refresh_token,
+          name: token.name,
+          email: token.email,
+          image: token.picture,
         }
       }
 
@@ -66,7 +80,10 @@ export const authOptions = {
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async session({ session, token }: { session: any; token: any }) {
-      session.error = token.error
+      session.user.name = token.name
+      session.user.image = token.image
+      session.user.email = token.email
+
       return session
     },
   },

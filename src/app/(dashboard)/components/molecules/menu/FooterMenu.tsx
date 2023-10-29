@@ -1,7 +1,7 @@
 import { FooterMenuItem } from '@/app/(dashboard)/components/atoms'
 import { FooterMenu } from '@/app/(dashboard)/layers/domain/footer'
 
-const FooterMenu = ({ menu }: FooterMenuProps) => {
+const FooterMenu = async ({ menu }: FooterMenuProps) => {
   const { title, items } = menu
 
   return (

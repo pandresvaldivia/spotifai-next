@@ -27,7 +27,8 @@
       "@organisms": ["./src/app/components/organisms/index"],
       "@templates": ["./src/app/components/templates/index"],
       "@interfaces/*": ["./src/shared/interfaces/*"],
-      "@constants/*": ["./src/shared/constants/*"]
+      "@constants/*": ["./src/shared/constants/*"],
+      "@helpers/*": ["./src/shared/helpers/*"]
     }
   },
   "include": [
