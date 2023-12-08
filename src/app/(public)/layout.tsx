@@ -1,8 +1,9 @@
 import { ReactNode } from 'react'
 import classNames from 'classnames'
 
-import { PublicFooter, PublicHeader } from '@/app/(public)/components/organisms'
-import publicLayoutStyles from '@/app/(public)/styles/layout.module.scss'
+import { PublicFooter, PublicHeader } from '@/ui/public/components/organisms'
+
+import publicLayoutStyles from '@ui/public/styles/layout.module.scss'
 
 const PublicLayout = ({ children }: { children: ReactNode }) => {
   return (

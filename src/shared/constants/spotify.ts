@@ -14,4 +14,5 @@ export const SCOPES = [
   'playlist-read-collaborative',
   'user-read-currently-playing',
   'user-read-playback-state',
+  'playlist-read-private',
 ]

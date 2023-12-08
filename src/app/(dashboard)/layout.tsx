@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
+import { Content, Navbar, Player } from '@ui/dashboard/components/organisms'
 import classNames from 'classnames'
 
-import { Content, Navbar, Player } from '@/app/(dashboard)/components/organisms'
-import dashboardLayoutStyles from '@/app/(dashboard)/styles/dashboard-layout.module.scss'
+import dashboardLayoutStyles from '@ui/dashboard/styles/dashboard-layout.module.scss'
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
