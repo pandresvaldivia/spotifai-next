@@ -1,4 +1,4 @@
-import { IconProps } from '@/shared/interfaces/icon'
+import { IconProps } from '@/shared/domain/models/icon'
 
 const TwitterIcon = ({ ...rest }: IconProps) => {
   return (

@@ -1,7 +1,7 @@
-import { CurrentUserPlaylistItem } from '@modules/dashboard/domain/models/me.model'
+import { LibraryItem } from '@modules/library/domain/models/library.model'
 import Image from 'next/image'
 
-const PlaylistItem = ({ item }: PlaylistItemProps) => {
+const LibraryListItem = ({ item }: LibraryListItemProps) => {
   const { images, name, type, owner } = item
   const { display_name: ownerName } = owner
 
@@ -22,8 +22,8 @@ const PlaylistItem = ({ item }: PlaylistItemProps) => {
   )
 }
 
-type PlaylistItemProps = {
-  item: CurrentUserPlaylistItem
+type LibraryListItemProps = {
+  item: LibraryItem
 }
 
-export default PlaylistItem
+export default LibraryListItem

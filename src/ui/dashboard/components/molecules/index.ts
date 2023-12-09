@@ -1,5 +1,3 @@
-export { default as Playlist } from './list/Playlist'
 export { default as FooterMenu } from './menu/FooterMenu'
-export { default as LibraryMenu } from './menu/LibraryMenu'
 export { default as MainMenu } from './menu/MainMenu'
 export { default as SocialMediaMenu } from './menu/SocialMediaMenu'

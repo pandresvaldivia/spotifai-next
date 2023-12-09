@@ -1,11 +1,12 @@
-import { LibraryMenu, MainMenu } from '@ui/dashboard/components/molecules'
+import { MainMenu } from '@ui/dashboard/components/molecules'
+import LibraryPanel from '@ui/library/LibraryPanel'
 import classNames from 'classnames'
 
 const Navbar = async ({ className }: NavbarProps) => {
   return (
     <nav className={classNames(className, 'flex flex-col gap-2 min-h-0')}>
       <MainMenu />
-      <LibraryMenu />
+      <LibraryPanel />
     </nav>
   )
 }

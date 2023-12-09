@@ -1,5 +1,6 @@
 export { default as GithubIcon } from './GithubIcon'
 export { default as HomeIcon } from './HomeIcon'
+export { default as LibraryIcon } from './LibraryIcon'
 export { default as LinkedinIcon } from './LinkedinIcon'
 export { default as LogoIcon } from './LogoIcon'
 export { default as SearchIcon } from './SearchIcon'

@@ -1,4 +1,4 @@
-import { IconProps } from '@interfaces/icon'
+import { IconProps } from '@/shared/domain/models/icon'
 
 const SearchIcon = ({ ...rest }: IconProps) => {
   return (

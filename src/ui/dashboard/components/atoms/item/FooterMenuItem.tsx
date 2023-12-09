@@ -1,4 +1,4 @@
-import { FooterItem } from '@/app/(dashboard)/layers/domain/footer'
+import { FooterItem } from '@modules/dashboard/domain/models/footer.model'
 
 const FooterMenuItem = ({ item }: FooterMenuItemProps) => {
   const { text, url } = item

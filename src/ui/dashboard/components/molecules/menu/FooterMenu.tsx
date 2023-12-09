@@ -1,6 +1,5 @@
+import { FooterMenu } from '@modules/dashboard/domain/models/footer.model'
 import { FooterMenuItem } from '@ui/dashboard/components/atoms'
-
-import { FooterMenu } from '@/modules/dashboard/domain/footer'
 
 const FooterMenu = async ({ menu }: FooterMenuProps) => {
   const { title, items } = menu

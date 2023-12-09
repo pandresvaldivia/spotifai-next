@@ -1,4 +1,4 @@
-import { IconProps } from '@/shared/interfaces/icon'
+import { IconProps } from '@/shared/domain/models/icon'
 
 const GithubIcon = ({ ...rest }: IconProps) => {
   return (

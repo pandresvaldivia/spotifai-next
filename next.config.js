@@ -14,6 +14,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.scdn.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'image-cdn-fa.spotifycdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'newjams-images.scdn.co',
+      },
     ],
   },
 }

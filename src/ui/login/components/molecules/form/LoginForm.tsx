@@ -1,8 +1,8 @@
+import { LoginAnchor, LoginButton } from '@ui/login/components/atoms'
 import classNames from 'classnames'
 import { getProviders } from 'next-auth/react'
 
-import { LoginAnchor, LoginButton } from '@/app/(public)/(modules)/login/components/atoms'
-import loginFormStyles from '@/app/(public)/(modules)/login/styles/login-form.module.scss'
+import loginFormStyles from '@ui/login/styles/login-form.module.scss'
 
 const LoginForm = async () => {
   const providers = await getProviders()

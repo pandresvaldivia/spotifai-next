@@ -1,12 +1,12 @@
-import { Playlist } from '@ui/dashboard/components/molecules'
 import { PanelTemplate } from '@ui/dashboard/components/templates'
+import Library from '@ui/library/Library'
 
-const LibraryMenu = () => {
+const LibraryPanel = () => {
   return (
     <PanelTemplate className="grid p-2 min-h-0">
-      <Playlist />
+      <Library />
     </PanelTemplate>
   )
 }
 
-export default LibraryMenu
+export default LibraryPanel
