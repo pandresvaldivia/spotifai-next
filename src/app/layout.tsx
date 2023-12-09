@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
-import '@styles/global.scss'
+import '@ui/shared/styles/global.scss'
 
 const montserrat = Montserrat({
   subsets: ['latin'],

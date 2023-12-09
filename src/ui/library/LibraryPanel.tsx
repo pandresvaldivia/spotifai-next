@@ -3,7 +3,7 @@ import Library from '@ui/library/Library'
 
 const LibraryPanel = () => {
   return (
-    <PanelTemplate className="grid p-2 min-h-0">
+    <PanelTemplate className="grid p-2 pt-4 min-h-0">
       <Library />
     </PanelTemplate>
   )

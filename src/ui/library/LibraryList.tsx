@@ -7,7 +7,7 @@ const LibraryList = () => {
   const { libraryItems } = useLibraryContext()
 
   return (
-    <ul aria-label="Your library" className="overflow-auto">
+    <ul aria-label="Your library">
       {libraryItems.map((item) => {
         return <LibraryListItem key={item.id} item={item} />
       })}

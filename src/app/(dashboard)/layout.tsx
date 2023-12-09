@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import dashboardLayoutStyles from '@ui/dashboard/styles/dashboard-layout.module.scss'
 
-const DashboardLayout = ({ children }: { children: ReactNode }) => {
+const DashboardLayout = async ({ children }: { children: ReactNode }) => {
   return (
     <div className={classNames(dashboardLayoutStyles.main, 'p-2 grid gap-2 h-screen')}>
       <Navbar className={classNames(dashboardLayoutStyles.navbar)} />
