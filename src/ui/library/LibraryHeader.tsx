@@ -1,24 +1,29 @@
 'use client'
 
 import React, { ChangeEvent, useState } from 'react'
+import { filterLibraryByName } from '@modules/library/application/filter/filter-by-name.app'
 import { useLibraryContext } from '@modules/library/infrastructure/contexts/Library.context'
+import { createLibraryPorts } from '@modules/library/infrastructure/library.infrastructure'
 import classNames from 'classnames'
 
 import { SearchIcon } from '../shared/icons/outline'
 
 const LibraryHeader = () => {
+  const libraryPorts = createLibraryPorts()
+
   const [isOpen, setIsOpen] = useState(false)
   const { setLibraryItems, allLibraryItems } = useLibraryContext()
 
   const filterLibrary = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault()
-    const value = e.target.value.trim()
 
-    setLibraryItems(() =>
-      allLibraryItems.filter((item) => {
-        return item.name.toLowerCase().includes(value.toLowerCase())
-      })
-    )
+    const filteredValues = filterLibraryByName({
+      ports: libraryPorts,
+      value: e.target.value,
+      items: allLibraryItems,
+    })
+
+    setLibraryItems(() => filteredValues)
   }
 
   return (

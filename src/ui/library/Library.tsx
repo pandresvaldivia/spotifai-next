@@ -1,12 +1,13 @@
+import { getLibrary } from '@modules/library/application/get/get-library.app'
 import { LibraryProvider } from '@modules/library/infrastructure/contexts'
-import { createLibraryAdapter } from '@modules/library/infrastructure/library.infrastructure'
+import { createLibraryPorts } from '@modules/library/infrastructure/library.infrastructure'
 import LibraryHeader from '@ui/library/LibraryHeader'
 import LibraryList from '@ui/library/LibraryList'
 
 const Library = async () => {
-  const libraryService = createLibraryAdapter()
+  const libraryPorts = createLibraryPorts()
 
-  const library = await libraryService.get()
+  const library = await getLibrary(libraryPorts)
 
   if (!library || !library.items) return null
 
