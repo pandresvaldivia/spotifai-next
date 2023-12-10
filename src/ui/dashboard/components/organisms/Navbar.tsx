@@ -1,5 +1,5 @@
 import { MainMenu } from '@ui/dashboard/components/molecules'
-import LibraryPanel from '@ui/library/LibraryPanel'
+import LibraryPanel from '@ui/library/components/LibraryPanel'
 import classNames from 'classnames'
 
 const Navbar = async ({ className }: NavbarProps) => {

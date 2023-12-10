@@ -1,10 +1,7 @@
+import { HomeIcon as HomeIconOutline, SearchIcon as SearchIconOutline } from '@icons/outline'
+import { HomeIcon as HomeIconSolid, SearchIcon as SearchIconSolid } from '@icons/solid'
 import { MainMenuItem } from '@ui/dashboard/components/atoms'
 import { PanelTemplate } from '@ui/dashboard/components/templates'
-import {
-  HomeIcon as HomeIconOutline,
-  SearchIcon as SearchIconOutline,
-} from '@ui/shared/icons/outline'
-import { HomeIcon as HomeIconSolid, SearchIcon as SearchIconSolid } from '@ui/shared/icons/solid'
 
 const MainMenu = () => {
   return (

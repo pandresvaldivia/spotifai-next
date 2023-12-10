@@ -5,8 +5,9 @@ export interface Library {
 export interface LibraryItem {
   id: string
   name: string
+  order: number
   images: LibraryItemImage[]
-  owner: LibraryItemOwner
+  owner: string
   type: LibraryItemType
 }
 
@@ -14,10 +15,6 @@ export interface LibraryItemImage {
   url: string
   height: number | null
   width: number | null
-}
-
-export interface LibraryItemOwner {
-  display_name: string
 }
 
 export enum LibraryItemType {

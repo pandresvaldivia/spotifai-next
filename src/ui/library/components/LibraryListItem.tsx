@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 const LibraryListItem = ({ item }: LibraryListItemProps) => {
   const { images, name, type, owner } = item
-  const { display_name: ownerName } = owner
 
   const image = images[0].url
 
@@ -15,7 +14,7 @@ const LibraryListItem = ({ item }: LibraryListItemProps) => {
       <div className="flex flex-col gap-0.5 font-medium">
         <p className="text-white text-sm">{name}</p>
         <p className="text-gray-200 text-xs">
-          <span className="capitalize">{type}</span> • {ownerName}
+          <span className="capitalize">{type}</span> • {owner}
         </p>
       </div>
     </li>

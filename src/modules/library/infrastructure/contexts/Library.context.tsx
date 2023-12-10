@@ -9,7 +9,7 @@ const LibraryProvider = ({ children, items }: PlaylistProviderProps) => {
   const [libraryItems, setLibraryItems] = useState<LibraryItem[]>(items)
 
   const value = {
-    allLibraryItems: items,
+    originalLibraryItems: items,
     libraryItems,
     setLibraryItems,
   }
@@ -23,7 +23,7 @@ type PlaylistProviderProps = {
 }
 
 type LibraryContextProps = {
-  allLibraryItems: LibraryItem[]
+  originalLibraryItems: LibraryItem[]
   libraryItems: LibraryItem[]
   setLibraryItems: Dispatch<SetStateAction<LibraryItem[]>>
 }

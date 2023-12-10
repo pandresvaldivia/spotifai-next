@@ -3,4 +3,5 @@ import { Library, LibraryItem } from '@modules/library/domain/models/library.mod
 export interface LibraryPorts {
   get: () => Promise<Library | null>
   filterByName: (value: string, items: LibraryItem[]) => LibraryItem[]
+  sortByProperty: (items: LibraryItem[], property: keyof LibraryItem) => LibraryItem[]
 }

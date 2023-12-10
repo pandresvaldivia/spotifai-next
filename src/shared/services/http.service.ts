@@ -13,6 +13,8 @@ export const spotifyApi = async <ResponseType>({
       },
     })
 
+    if (!response.ok) return null
+
     const data: ResponseType = await response.json()
 
     return data

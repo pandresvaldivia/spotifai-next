@@ -1,4 +1,4 @@
-import { LogoIcon } from '@ui/shared/icons/solid'
+import { LogoIcon } from '@icons/solid'
 import Link from 'next/link'
 
 const PublicHeader = () => {

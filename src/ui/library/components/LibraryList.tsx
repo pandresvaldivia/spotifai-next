@@ -1,7 +1,7 @@
 'use client'
 
 import { useLibraryContext } from '@modules/library/infrastructure/contexts/Library.context'
-import LibraryListItem from '@ui/library/LibraryListItem'
+import LibraryListItem from '@ui/library/components/LibraryListItem'
 
 const LibraryList = () => {
   const { libraryItems } = useLibraryContext()

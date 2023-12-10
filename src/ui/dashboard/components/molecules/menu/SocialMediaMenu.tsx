@@ -1,5 +1,5 @@
+import { GithubIcon, LinkedinIcon, TwitterIcon } from '@icons/solid'
 import { SocialMediaMenuItem } from '@ui/dashboard/components/atoms'
-import { GithubIcon, LinkedinIcon, TwitterIcon } from '@ui/shared/icons/solid'
 
 const SocialMediaMenu = () => {
   return (

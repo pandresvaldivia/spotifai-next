@@ -1,18 +1,17 @@
 'use client'
 
 import { ChangeEvent, useRef, useState } from 'react'
+import { CrossIcon, SearchIcon } from '@icons/outline'
 import { filterLibraryByName } from '@modules/library/application/filter/filter-by-name.app'
 import { useLibraryContext } from '@modules/library/infrastructure/contexts/Library.context'
 import { createLibraryPorts } from '@modules/library/infrastructure/library.infrastructure'
 import classNames from 'classnames'
 import { useOnClickOutside } from 'usehooks-ts'
 
-import { CrossIcon, SearchIcon } from '../shared/icons/outline'
-
 const LibraryFilter = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [searchValue, setSearchValue] = useState('')
-  const { setLibraryItems, allLibraryItems } = useLibraryContext()
+  const { setLibraryItems, originalLibraryItems } = useLibraryContext()
   const inputRef = useRef<HTMLInputElement>(null)
   const formRef = useRef<HTMLFormElement>(null)
 
@@ -26,7 +25,7 @@ const LibraryFilter = () => {
     const filteredValues = filterLibraryByName({
       value: searchValue,
       ports: libraryPorts,
-      items: allLibraryItems,
+      items: originalLibraryItems,
     })
 
     setLibraryItems(() => filteredValues)
@@ -52,7 +51,7 @@ const LibraryFilter = () => {
 
   function handleEmptyInput() {
     setSearchValue('')
-    setLibraryItems(allLibraryItems)
+    setLibraryItems(originalLibraryItems)
   }
 
   return (
