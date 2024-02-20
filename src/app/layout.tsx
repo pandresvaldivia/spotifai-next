@@ -6,7 +6,6 @@ import '@ui/shared/styles/global.scss'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  display: 'swap',
   variable: '--font-montserrat',
 })
 

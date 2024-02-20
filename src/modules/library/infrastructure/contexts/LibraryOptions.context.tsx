@@ -3,16 +3,13 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react'
 import { LibrarySortOption } from '@modules/library/domain/models/sort.model'
 import { LibraryViewOption } from '@modules/library/domain/models/view.model'
-import { LIBRARY_VIEW_OPTIONS } from '@modules/library/infrastructure/data/library-view.data'
-
-import { LIBRARY_SORT_OPTIONS } from '../data/library-sort.data'
 
 const LibraryOptionsContext = createContext({} as LibraryOptionsContextProps)
 
-const LibraryOptionsProvider = ({ children }: LibraryOptionsProviderProps) => {
+const LibraryOptionsProvider = ({ children, view, sortBy }: LibraryOptionsProviderProps) => {
   const [libraryOptions, setLibraryOptions] = useState<LibraryOptionsStateProps>({
-    sortBy: LIBRARY_SORT_OPTIONS[0],
-    view: LIBRARY_VIEW_OPTIONS[0],
+    sortBy,
+    view,
   })
 
   const value = {
@@ -25,6 +22,8 @@ const LibraryOptionsProvider = ({ children }: LibraryOptionsProviderProps) => {
 
 type LibraryOptionsProviderProps = {
   children: ReactNode
+  view: LibraryViewOption
+  sortBy: LibrarySortOption
 }
 
 type LibraryOptionsContextProps = {

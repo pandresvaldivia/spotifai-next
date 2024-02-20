@@ -2,40 +2,20 @@
 
 import { ChangeEvent, useRef, useState } from 'react'
 import { CrossIcon, SearchIcon } from '@icons/outline'
-import { filterLibraryByName } from '@modules/library/application/filter/filter-by-name.app'
 import { useLibraryContext } from '@modules/library/infrastructure/contexts/Library.context'
-import { createLibraryPorts } from '@modules/library/infrastructure/library.infrastructure'
 import classNames from 'classnames'
 import { useOnClickOutside } from 'usehooks-ts'
 
 const LibraryFilter = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [searchValue, setSearchValue] = useState('')
-  const { setLibraryItems, originalLibraryItems } = useLibraryContext()
+  const { setFilterQuery, filterQuery } = useLibraryContext()
   const inputRef = useRef<HTMLInputElement>(null)
-  const formRef = useRef<HTMLFormElement>(null)
+  const formRef = useRef<HTMLDivElement>(null)
 
   useOnClickOutside(formRef, hanndleOnclickOutside)
 
-  const libraryPorts = createLibraryPorts()
-
-  function filterLibrary(e: ChangeEvent<HTMLInputElement>) {
-    e.preventDefault()
-
-    const filteredValues = filterLibraryByName({
-      value: searchValue,
-      ports: libraryPorts,
-      items: originalLibraryItems,
-    })
-
-    setLibraryItems(() => filteredValues)
-  }
-
   function handleOnChange(e: ChangeEvent<HTMLInputElement>) {
-    e.preventDefault()
-    setSearchValue(e.target.value)
-
-    filterLibrary(e)
+    setFilterQuery(e.target.value)
   }
 
   function handleOnClick() {
@@ -44,24 +24,23 @@ const LibraryFilter = () => {
   }
 
   function hanndleOnclickOutside() {
-    if (searchValue) return
+    if (filterQuery) return
 
     setIsOpen(false)
   }
 
   function handleEmptyInput() {
-    setSearchValue('')
-    setLibraryItems(originalLibraryItems)
+    setFilterQuery('')
   }
 
   return (
-    <form ref={formRef} className="relative w-max">
+    <div ref={formRef} className="relative w-max">
       <input
         type="text"
         role="search"
         ref={inputRef}
         onChange={handleOnChange}
-        value={searchValue}
+        value={filterQuery}
         className={classNames(
           {
             'w-8 opacity-0': !isOpen,
@@ -91,7 +70,7 @@ const LibraryFilter = () => {
       >
         <CrossIcon height="16" width="16" />
       </button>
-    </form>
+    </div>
   )
 }
 

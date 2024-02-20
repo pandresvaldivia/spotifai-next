@@ -1,7 +1,7 @@
 import { LibraryItem } from '@modules/library/domain/models/library.model'
 import Image from 'next/image'
 
-const LibraryListItem = ({ item }: LibraryListItemProps) => {
+const LibraryViewListItem = ({ item }: LibraryViewListItemProps) => {
   const { images, name, type, owner } = item
 
   const image = images[0].url
@@ -21,8 +21,8 @@ const LibraryListItem = ({ item }: LibraryListItemProps) => {
   )
 }
 
-type LibraryListItemProps = {
+type LibraryViewListItemProps = {
   item: LibraryItem
 }
 
-export default LibraryListItem
+export default LibraryViewListItem
