@@ -1,7 +1,7 @@
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 const Player = ({ className }: PlayerProps) => {
-  return <div className={classNames(className)}>Player</div>
+  return <div className={clsx(className)}>Player</div>
 }
 
 type PlayerProps = {

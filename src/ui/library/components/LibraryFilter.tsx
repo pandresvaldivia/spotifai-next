@@ -3,7 +3,7 @@
 import { ChangeEvent, useRef, useState } from 'react'
 import { CrossIcon, SearchIcon } from '@icons/outline'
 import { useLibraryContext } from '@modules/library/infrastructure/contexts/Library.context'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import { useOnClickOutside } from 'usehooks-ts'
 
 const LibraryFilter = () => {
@@ -41,7 +41,7 @@ const LibraryFilter = () => {
         ref={inputRef}
         onChange={handleOnChange}
         value={filterQuery}
-        className={classNames(
+        className={clsx(
           {
             'w-8 opacity-0': !isOpen,
             'w-52 px-8 opacity-100': isOpen,
@@ -52,7 +52,7 @@ const LibraryFilter = () => {
       />
       <button
         type="button"
-        className={classNames(
+        className={clsx(
           {
             'pointer-events-none text-gray-100': isOpen,
             'text-gray-200': !isOpen,

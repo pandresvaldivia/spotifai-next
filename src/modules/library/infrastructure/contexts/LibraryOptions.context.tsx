@@ -6,10 +6,16 @@ import { LibraryViewOption } from '@modules/library/domain/models/view.model'
 
 const LibraryOptionsContext = createContext({} as LibraryOptionsContextProps)
 
-const LibraryOptionsProvider = ({ children, view, sortBy }: LibraryOptionsProviderProps) => {
+const LibraryOptionsProvider = ({
+  children,
+  view,
+  sortBy,
+  gridDensity = 0.5,
+}: LibraryOptionsProviderProps) => {
   const [libraryOptions, setLibraryOptions] = useState<LibraryOptionsStateProps>({
     sortBy,
     view,
+    gridDensity,
   })
 
   const value = {
@@ -24,6 +30,7 @@ type LibraryOptionsProviderProps = {
   children: ReactNode
   view: LibraryViewOption
   sortBy: LibrarySortOption
+  gridDensity?: number
 }
 
 type LibraryOptionsContextProps = {
@@ -34,6 +41,7 @@ type LibraryOptionsContextProps = {
 type LibraryOptionsStateProps = {
   sortBy: LibrarySortOption
   view: LibraryViewOption
+  gridDensity: number
 }
 
 export const useLibraryOptionsContext = () => useContext(LibraryOptionsContext)

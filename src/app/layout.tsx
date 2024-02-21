@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" className={classNames(montserrat.variable)}>
+    <html lang="en" className={clsx(montserrat.variable)}>
       <body className="overflow-hidden">{children}</body>
     </html>
   )

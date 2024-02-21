@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 const PanelTemplate = ({ children, className }: PanelTemplateProps) => {
-  return <div className={classNames(className, 'rounded-lg bg-gray-700')}>{children}</div>
+  return <div className={clsx(className, 'rounded-lg bg-gray-700')}>{children}</div>
 }
 
 type PanelTemplateProps = {

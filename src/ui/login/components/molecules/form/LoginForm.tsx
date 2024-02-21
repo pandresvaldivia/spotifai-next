@@ -1,5 +1,5 @@
 import { LoginAnchor, LoginButton } from '@ui/login/components/atoms'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import { getProviders } from 'next-auth/react'
 
 import loginFormStyles from '@ui/login/styles/login-form.module.scss'
@@ -13,15 +13,15 @@ const LoginForm = async () => {
 
   return (
     <div
-      className={classNames(
+      className={clsx(
         loginFormStyles.main,
         'text-center bg-black rounded-lg py-8 px-4 md:px-8 mx-auto w-full'
       )}
     >
-      <h1 className={classNames(loginFormStyles.title, 'text-2xl text-white font-bold mb-12')}>
+      <h1 className={clsx(loginFormStyles.title, 'text-2xl text-white font-bold mb-12')}>
         Log in to Spotifai
       </h1>
-      <div className={classNames(loginFormStyles.wrapper, 'flex flex-col mx-auto')}>
+      <div className={clsx(loginFormStyles.wrapper, 'flex flex-col mx-auto')}>
         <LoginButton providerId={id} className="mb-8" />
         <LoginAnchor
           text="Forgot your password?"

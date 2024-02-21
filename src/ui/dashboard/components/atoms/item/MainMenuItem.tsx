@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactElement } from 'react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -16,7 +16,7 @@ const MainMenuItem = ({
 
   return (
     <li
-      className={classNames(
+      className={clsx(
         { 'text-white': isActive, 'text-gray-100 hover:text-white transition-colors': !isActive },
         'p-3 font-bold text-sm'
       )}

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { DropdownMenuLabel, DropdownMenuRadioGroup } from '@ui/chadcn/components/dropdown-menu'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import LibraryOptionsStyles from '@ui/library/styles/library-options.module.scss'
 
@@ -12,7 +12,7 @@ const LibraryOptionsGroup = ({
 }: LibraryOptionsGroupProps) => {
   return (
     <DropdownMenuRadioGroup value={value} onValueChange={onValueChange}>
-      <DropdownMenuLabel className={classNames(LibraryOptionsStyles.title, 'text-gray-200 p-3')}>
+      <DropdownMenuLabel className={clsx(LibraryOptionsStyles.title, 'text-gray-200 p-3')}>
         <p className="leading-normal">{title}</p>
       </DropdownMenuLabel>
       {children}

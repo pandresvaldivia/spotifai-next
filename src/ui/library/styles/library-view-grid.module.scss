@@ -1,0 +1,5 @@
+.main {
+  --column-count: 4;
+
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+}
