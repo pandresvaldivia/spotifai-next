@@ -14,15 +14,14 @@ const refreshToken = async (token: any) => {
     // We need the `token_endpoint`.
     const response = await fetch(SPOTIFY_TOKEN_URL, {
       headers: {
-        Authorization: `Basic ${Buffer.from(
-          `${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
-        ).toString('base64')}`,
         'content-type': 'application/x-www-form-urlencoded',
       },
       method: 'POST',
       body: new URLSearchParams({
         grant_type: 'refresh_token',
         refresh_token: token.refresh_token,
+        client_id: SPOTIFY_CLIENT_ID,
+        client_secret: SPOTIFY_CLIENT_SECRET,
       }),
     })
 
@@ -30,14 +29,14 @@ const refreshToken = async (token: any) => {
 
     if (!response.ok) throw tokens
 
-    return {
+    const newToken = {
       ...token, // Keep the previous token properties
       access_token: tokens.access_token,
       expires_at: Math.floor(Date.now() / 1000 + Number(tokens.expires_in)),
-      // Fall back to old refresh token, but note that
-      // many providers may only allow using a refresh token once.
-      refresh_token: tokens.refresh_token ?? token.refresh_token,
+      refresh_token: tokens.refresh_token,
     }
+
+    return newToken
   } catch (error) {
     console.error('Error refreshing access token', error)
     // The error property will be used client-side to handle the refresh token error
@@ -63,7 +62,7 @@ export const authOptions = {
         // Save the access token and refresh token in the JWT on the initial login
         return {
           access_token: account.access_token,
-          expires_at: Math.floor(Date.now() / 1000 + account.expires_at),
+          expires_at: Math.floor(Date.now() / 1000 + account.expires_in),
           refresh_token: account.refresh_token,
           name: token.name,
           email: token.email,
