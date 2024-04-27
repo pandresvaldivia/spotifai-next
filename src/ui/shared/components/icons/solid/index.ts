@@ -1,3 +1,4 @@
+export { ExternalLinkIcon } from './ExternalLinkIcon'
 export { default as GithubIcon } from './GithubIcon'
 export { default as HomeIcon } from './HomeIcon'
 export { default as LibraryIcon } from './LibraryIcon'

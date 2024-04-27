@@ -22,6 +22,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'newjams-images.scdn.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'platform-lookaside.fbsbx.com',
+      },
     ],
   },
 }

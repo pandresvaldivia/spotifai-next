@@ -29,6 +29,9 @@ module.exports = {
       },
     },
     extend: {
+      zIndex: {
+        '1': '1',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: 0 },

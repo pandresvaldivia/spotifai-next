@@ -1,6 +1,13 @@
+import clsx from 'clsx'
+
+import homeStyles from '@/ui/home/styles/home.module.scss'
+
 const Home = () => {
   return (
-    <main className="flex flex-col items-center justify-between p-24 text-white">Spotifai</main>
+    <>
+      <div className={clsx(homeStyles.background, 'absolute w-full h-80')} />
+      <main className="relative"></main>
+    </>
   )
 }
 
