@@ -1,13 +1,15 @@
-import clsx from 'clsx'
-
-import homeStyles from '@/ui/home/styles/home.module.scss'
+import { HomeBackgroundProvider } from '@/modules/home/infrastructure/contexts'
+import { HomeBackground } from '@/ui/home/background/HomeBackground'
+import { WelcomePlaylists } from '@/ui/home/welcome/Welcome'
 
 const Home = () => {
   return (
-    <>
-      <div className={clsx(homeStyles.background, 'absolute w-full h-80')} />
-      <main className="relative"></main>
-    </>
+    <HomeBackgroundProvider>
+      <HomeBackground />
+      <main className="relative px-6">
+        <WelcomePlaylists />
+      </main>
+    </HomeBackgroundProvider>
   )
 }
 
