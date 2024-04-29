@@ -12,7 +12,7 @@ const PlayButton = ({ className }: PlayButtonProps) => {
         'inline-flex items-center justify-center h-12 w-12 bg-green-100 rounded-full'
       )}
     >
-      <PlayIcon />
+      <PlayIcon className="h-1/2" />
     </button>
   )
 }

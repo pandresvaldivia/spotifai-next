@@ -29,21 +29,21 @@ export const WelcomePlaylist = ({ playlist, index }: WelcomePlaylistProps) => {
         )}
         onMouseEnter={handleMouseEnter}
       >
-        <div>
+        <div className="shrink-0">
           <Image
             src={image}
             alt={name}
             width="64"
             height="64"
-            className="h-16 aspect-square object-cover"
+            className="h-12 w-12 2xl:h-16 2xl:w-16 object-cover"
           />
         </div>
-        <div className="flex items-center pl-4 grow">
-          <h3 className="text-white text-sm font-bold grow">{name}</h3>
+        <div className="flex items-center pl-4 grow min-w-0">
+          <h3 className="text-white text-xs 2xl:text-sm font-bold grow truncate">{name}</h3>
           <div className="px-2">
             <PlayButton
               className={clsx(
-                'opacity-0 transition-all duration-300 hover:scale-110',
+                'h-8 w-8 2xl:h-12 2xl:w-12 opacity-0 transition-all duration-300 hover:scale-110',
                 'group-hover:opacity-100'
               )}
             />

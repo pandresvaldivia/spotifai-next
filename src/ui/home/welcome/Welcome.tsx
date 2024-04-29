@@ -13,7 +13,7 @@ export const WelcomePlaylists = async () => {
   const welcomePlaylists = library.items.slice(0, 8)
 
   return (
-    <section className="grid grid-cols-4  gap-3" aria-label="Welcome playlists">
+    <section className="grid grid-cols-2 xl:grid-cols-4 gap-3" aria-label="Welcome playlists">
       {welcomePlaylists.map((item, index) => (
         <WelcomePlaylist key={item.id} playlist={item} index={index} />
       ))}
