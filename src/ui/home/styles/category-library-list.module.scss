@@ -1,0 +1,3 @@
+.main {
+  grid-template-columns: repeat(var(--playlist-columns), minmax(0, 1fr));
+}

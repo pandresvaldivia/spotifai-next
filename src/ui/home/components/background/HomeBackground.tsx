@@ -1,9 +1,9 @@
 'use client'
 
 import { CSSProperties } from 'react'
+import { useHomeBackgroundContext } from '@modules/home/infrastructure/contexts/HomeBackground.context'
 import clsx from 'clsx'
 
-import { useHomeBackgroundContext } from '@/modules/home/infrastructure/contexts/HomeBackground.context'
 import homeBackgroundStyles from '@/ui/home/styles/home-background.module.scss'
 
 export const HomeBackground = () => {

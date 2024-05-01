@@ -11,8 +11,9 @@ const PlayButton = ({ className }: PlayButtonProps) => {
         className,
         'inline-flex items-center justify-center h-12 w-12 bg-green-100 rounded-full'
       )}
+      aria-label="Play playlist"
     >
-      <PlayIcon className="h-1/2" />
+      <PlayIcon className="h-1/2" aria-hidden />
     </button>
   )
 }

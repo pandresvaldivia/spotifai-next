@@ -30,6 +30,22 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i2o.scdn.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'daily-mix.scdn.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'seed-mix-image.spotifycdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'thisis-images.spotifycdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'charts-images.scdn.co',
+      },
     ],
   },
 }

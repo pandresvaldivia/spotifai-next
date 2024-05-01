@@ -60,6 +60,7 @@ const LibraryFilter = () => {
           'absolute flex items-center justify-center hover:text-white p-2 rounded-full left-0 top-0 hover:bg-gray-300 transition-colors outline-none'
         )}
         onClick={handleOnClick}
+        aria-label="Search in your library"
       >
         <SearchIcon height="16" width="16" />
       </button>{' '}

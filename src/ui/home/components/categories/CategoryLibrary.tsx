@@ -1,8 +1,18 @@
+import { getCategoryPlaylists } from '@modules/home/application/get/get-category-playlists.app'
+import { createHomePorts } from '@modules/home/infrastructure/home.infrastructure'
 import { Category } from '@modules/home/models/category.model'
 import Link from 'next/link'
 
-export const CategoryLibrary = ({ category }: CategoryLibraryProps) => {
+import { CategoryLibraryList } from './CategoryLibraryList'
+
+export const CategoryLibrary = async ({ category }: CategoryLibraryProps) => {
   const { id, name } = category
+
+  const homePorts = createHomePorts()
+
+  const playlists = await getCategoryPlaylists({ adapter: homePorts, id })
+
+  if (!playlists || !playlists.items) return null
 
   return (
     <section aria-labelledby="category-name">
@@ -14,6 +24,7 @@ export const CategoryLibrary = ({ category }: CategoryLibraryProps) => {
           Show all
         </Link>
       </div>
+      <CategoryLibraryList playlists={playlists.items} />
     </section>
   )
 }

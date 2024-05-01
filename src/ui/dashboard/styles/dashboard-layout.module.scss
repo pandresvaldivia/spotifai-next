@@ -1,5 +1,5 @@
 .main {
-  grid-template-columns: 26.25rem 1fr;
+  grid-template-columns: 18rem 1fr;
   grid-template-rows: 1fr auto;
 
   grid-template-areas:
@@ -17,4 +17,10 @@
 
 .content {
   grid-area: content;
+}
+
+@screen lg {
+  .main {
+    grid-template-columns: 26.25rem 1fr;
+  }
 }

@@ -2,7 +2,7 @@ export interface CategoriesResponse {
   categories: CategoriesResponseContent
 }
 
-export interface CategoriesResponseContent {
+interface CategoriesResponseContent {
   href: string
   limit: number
   next: string
@@ -12,14 +12,14 @@ export interface CategoriesResponseContent {
   items: CategoriesResponseItem[]
 }
 
-export interface CategoriesResponseItem {
+interface CategoriesResponseItem {
   href: string
   icons: CategoriesResponseItemPoster[]
   id: string
   name: string
 }
 
-export interface CategoriesResponseItemPoster {
+interface CategoriesResponseItemPoster {
   url: string
   height: number
   width: number

@@ -3,7 +3,7 @@ import { FooterMenu, SocialMediaMenu } from '@ui/dashboard/components/molecules'
 
 const Footer = () => {
   return (
-    <footer className="pt-2 px-8 pb-10">
+    <footer className="px-8 pb-10 pt-20">
       <div className="flex justify-between gap-16">
         <div className="flex flex-wrap gap-8 grow max-w-2xl">
           {FOOTER_MENUS.map((menu) => (

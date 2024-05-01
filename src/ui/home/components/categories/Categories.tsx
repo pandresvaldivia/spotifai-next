@@ -11,7 +11,7 @@ export const Categories = async () => {
   if (!categories || !categories.items) return null
 
   return (
-    <section aria-label="Categories">
+    <section className="flex flex-col gap-6" aria-label="Categories">
       {categories.items.map((category) => (
         <CategoryLibrary key={category.id} category={category} />
       ))}
