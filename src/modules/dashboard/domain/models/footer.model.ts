@@ -1,10 +1,10 @@
-export type FooterMenu = {
+export type FooterMenuProps = {
   id: string
   title: string
-  items: FooterItem[]
+  items: FooterItemProps[]
 }
 
-export type FooterItem = {
+export type FooterItemProps = {
   id: string
   text: string
   url: string

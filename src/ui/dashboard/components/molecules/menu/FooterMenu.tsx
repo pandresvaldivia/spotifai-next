@@ -1,7 +1,7 @@
-import { FooterMenu } from '@modules/dashboard/domain/models/footer.model'
+import { FooterMenuProps } from '@modules/dashboard/domain/models/footer.model'
 import { FooterMenuItem } from '@ui/dashboard/components/atoms'
 
-const FooterMenu = async ({ menu }: FooterMenuProps) => {
+const FooterMenu = async ({ menu }: Props) => {
   const { title, items } = menu
 
   return (
@@ -16,8 +16,8 @@ const FooterMenu = async ({ menu }: FooterMenuProps) => {
   )
 }
 
-type FooterMenuProps = {
-  menu: FooterMenu
+type Props = {
+  menu: FooterMenuProps
 }
 
 export default FooterMenu

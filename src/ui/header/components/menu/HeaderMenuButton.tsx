@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { getServerSession } from 'next-auth'
 
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import { authOptions } from '@/shared/libs/next-auth.lib'
 import { DropdownMenuTrigger } from '@/ui/chadcn/components/dropdown-menu'
 
 export const HeaderMenuButton = async () => {

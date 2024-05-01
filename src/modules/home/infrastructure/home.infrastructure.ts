@@ -1,9 +1,9 @@
 import { HomePorts } from '@modules/home/application/home.ports'
+import { Categories } from '@modules/home/domain/models/category.model'
+import { CategoryPlaylists } from '@modules/home/domain/models/category-playlist.model'
 import { CategoriesResponse } from '@modules/home/infrastructure/services/categories.service'
 import { CategoryPlaylistsResponse } from '@modules/home/infrastructure/services/category-playlists.service'
 import { CATEGORY_ENDPOINT } from '@modules/home/infrastructure/services/endpoint.service'
-import { Categories } from '@modules/home/models/category.model'
-import { CategoryPlaylists } from '@modules/home/models/category-playlist.model'
 
 import { spotifyApi } from '@/shared/services/http.service'
 

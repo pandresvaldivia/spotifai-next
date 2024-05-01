@@ -1,6 +1,6 @@
 import { getCategoryPlaylists } from '@modules/home/application/get/get-category-playlists.app'
+import { Category } from '@modules/home/domain/models/category.model'
 import { createHomePorts } from '@modules/home/infrastructure/home.infrastructure'
-import { Category } from '@modules/home/models/category.model'
 import Link from 'next/link'
 
 import { CategoryLibraryList } from './CategoryLibraryList'

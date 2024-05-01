@@ -1,0 +1,4 @@
+.main {
+  height: clamp(8rem, 8rem + (100vw - 75rem)/424 * 40, 14.5rem);
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}

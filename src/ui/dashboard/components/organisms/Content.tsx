@@ -9,15 +9,13 @@ import { Header } from '@/ui/header/components/Header'
 
 const Content = ({ children, className }: ContentProps) => {
   return (
-    <ScrollArea>
-      <PanelTemplate
-        className={clsx(contentStyles.main, className, 'relative grid overflow-hidden')}
-      >
-        <Header />
+    <PanelTemplate className={clsx(contentStyles.main, className, 'relative grid overflow-hidden')}>
+      <Header />
+      <ScrollArea>
         {children}
         <Footer />
-      </PanelTemplate>
-    </ScrollArea>
+      </ScrollArea>
+    </PanelTemplate>
   )
 }
 

@@ -1,6 +1,6 @@
-import { FooterItem } from '@modules/dashboard/domain/models/footer.model'
+import { FooterItemProps } from '@modules/dashboard/domain/models/footer.model'
 
-const FooterMenuItem = ({ item }: FooterMenuItemProps) => {
+const FooterMenuItem = ({ item }: Props) => {
   const { text, url } = item
 
   return (
@@ -12,8 +12,8 @@ const FooterMenuItem = ({ item }: FooterMenuItemProps) => {
   )
 }
 
-type FooterMenuItemProps = {
-  item: FooterItem
+type Props = {
+  item: FooterItemProps
 }
 
 export default FooterMenuItem

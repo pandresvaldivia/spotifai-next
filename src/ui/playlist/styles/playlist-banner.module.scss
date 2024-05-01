@@ -1,0 +1,5 @@
+.main {
+  min-height: 15.625rem;
+  max-height: 25rem;
+  height: min(30vh, clamp(15.625rem, 15.625rem + (100vw - 75rem)/424 * 40, 25rem));
+}

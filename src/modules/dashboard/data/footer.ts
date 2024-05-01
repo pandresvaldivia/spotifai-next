@@ -1,6 +1,6 @@
-import { FooterItem, FooterMenu } from '@modules/dashboard/domain/models/footer.model'
+import { FooterItemProps, FooterMenuProps } from '@modules/dashboard/domain/models/footer.model'
 
-const FOOTER_COMPANY_ITEMS: FooterItem[] = [
+const FOOTER_COMPANY_ITEMS: FooterItemProps[] = [
   {
     id: 'about',
     text: 'About',
@@ -18,7 +18,7 @@ const FOOTER_COMPANY_ITEMS: FooterItem[] = [
   },
 ]
 
-const FOOTER_COMMUNITIES_ITEMS: FooterItem[] = [
+const FOOTER_COMMUNITIES_ITEMS: FooterItemProps[] = [
   {
     id: 'for-artists',
     text: 'For Artists',
@@ -46,7 +46,7 @@ const FOOTER_COMMUNITIES_ITEMS: FooterItem[] = [
   },
 ]
 
-const FOOTER_USEFUL_ITEMS: FooterItem[] = [
+const FOOTER_USEFUL_ITEMS: FooterItemProps[] = [
   {
     id: 'support',
     text: 'Support',
@@ -59,7 +59,7 @@ const FOOTER_USEFUL_ITEMS: FooterItem[] = [
   },
 ]
 
-export const FOOTER_MENUS: FooterMenu[] = [
+export const FOOTER_MENUS: FooterMenuProps[] = [
   {
     id: 'company',
     title: 'Company',
