@@ -1,0 +1,4 @@
+.main {
+  min-height: 21.25rem;
+  height: min(30vh, clamp(16rem, 250px + (100vw - 55.625rem)/424 * 150, 25rem));
+}
