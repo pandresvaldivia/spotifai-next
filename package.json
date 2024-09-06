@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "vitest --config ./vitest.config.ts",
     "prepare": "husky"
   },
   "dependencies": {
@@ -27,9 +28,11 @@
     "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.1",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "^10",
@@ -38,13 +41,17 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-testing-library": "^6.3.0",
+    "happy-dom": "^15.6.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "postcss": "^8",
     "prettier": "^3.0.3",
     "prettier-eslint": "^15.0.1",
     "sass": "^1.69.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.0.5"
   },
   "volta": {
     "node": "20.12.2",

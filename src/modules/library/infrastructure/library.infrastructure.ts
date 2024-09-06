@@ -13,7 +13,7 @@ export const createLibraryPorts = (): LibraryPorts => {
   }
 }
 
-const getLibrary = async (): Promise<Library | null> => {
+export const getLibrary = async (): Promise<Library | null> => {
   const library = await spotifyApi<LibraryResponse>({
     endpoint: LIBRARY_ENDPOINT.CURRENT_USER_LIBRARY,
   })
@@ -35,7 +35,7 @@ const getLibrary = async (): Promise<Library | null> => {
   }
 }
 
-const filterLibraryByName = (value: string, items: LibraryItem[]) => {
+const filterLibraryByName = (value: string, items: LibraryItem[]): LibraryItem[] => {
   const cleanValue = value.trim()
 
   const filteredItems = items.filter((item) => {
@@ -48,7 +48,7 @@ const filterLibraryByName = (value: string, items: LibraryItem[]) => {
   return filteredItems
 }
 
-const sortLibrayByProperty = (items: LibraryItem[], property: keyof LibraryItem) => {
+const sortLibrayByProperty = (items: LibraryItem[], property: keyof LibraryItem): LibraryItem[] => {
   return [...items].sort((a, b) => {
     if (a[property] < b[property]) {
       return -1
