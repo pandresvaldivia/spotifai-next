@@ -46,6 +46,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'charts-images.scdn.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'daylist.spotifycdn.com',
+      },
     ],
   },
 }
